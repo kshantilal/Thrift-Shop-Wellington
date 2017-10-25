@@ -10,3 +10,27 @@
 
 	}
 	add_action('wp_enqueue_scripts', 'customThemeEnqueues');
+
+	function customThemeSetup(){
+		add_theme_support('menus');
+		register_nav_menu('primary', 'This is the main navigation located at the top of the page');
+	}
+	add_action('init', 'customThemeSetup');
+
+
+	//Custom Logo
+	add_theme_support('custom-logo');
+
+	function customLogoSetup(){
+		$customLogoSettings = array(
+		'height' => 100,
+		'width' => 100,
+		'flex-height' => true,
+		'flex-width' => true,
+		'header-text' => array('Wordpress Custom Logo', 'This is a custom logo')
+
+		);
+		add_theme_support('custom-logo', $customLogoSettings);
+
+	}
+	add_action('after_setup_theme', 'customLogoSetup');

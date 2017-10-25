@@ -1,0 +1,27 @@
+body{
+	font-family: 'Source Sans Pro';
+	/*font-size: 22px;*/
+}
+
+li{
+	float: left;
+	display: block;
+	margin-right: 30px;
+}
+
+a{
+	color: #E65800;
+}
+
+.logo{
+	text-align: center;
+}
+
+.menu-primary-container{
+	margin-top: 100px;
+}
+
+ul#menu-primary{
+	float: left;
+	padding-left: 0px;
+}
