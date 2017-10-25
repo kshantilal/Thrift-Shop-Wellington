@@ -9,3 +9,4 @@
 		wp_enqueue_script( 'customScript', get_template_directory_uri() . '/js/thriftshop.js', array(), '1.0.0', true ); //true is asking is it in the footer. true or false.
 
 	}
+	add_action('wp_enqueue_scripts', 'customThemeEnqueues');

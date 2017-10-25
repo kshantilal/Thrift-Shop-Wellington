@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Thrift Shop Wellington</title>
-</head>
-<body>
+<?php get_header(); ?> <!-- We are putting the header here. It is getting the header.php -->
 
-	<h1>My thrift shop</h1>
 
-</body>
-</html>
+
+
+
+<?php get_footer(); ?>
