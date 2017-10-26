@@ -19,7 +19,31 @@
 
 	//Featured Images
 	add_theme_support( 'post-thumbnails' );
-	add_image_size( 'single-post-thumbnail', 500, 1000, true );
+	add_image_size('single-post-thumbnail', 720, 480, array('center', 'center'));
+	
+
+	// function add_image_size($name, $width = 250, $height = 250, $crop = true){
+	// 	global $_wp_additional_image_sizes;
+
+	// 	$_wp_additional_image_sizes[ $name ] = array(
+	// 		'width' => absint($width),
+	// 		'height' => absint($height),
+	// 		'crop' => $crop
+
+	// 	); 
+	// }
+	// function add_image_size( $name, $width = 0, $height = 0, $crop = false ) {
+ //    global $_wp_additional_image_sizes;
+ 
+	//     $_wp_additional_image_sizes[ $name ] = array(
+	//         'width'  => absint( $width ),
+	//         'height' => absint( $height ),
+	//         'crop'   => $crop,
+	//     );
+	// }
+
+
+
 
 	//Custom Logo
 	add_theme_support('custom-logo');
@@ -37,3 +61,4 @@
 
 	}
 	add_action('after_setup_theme', 'customLogoSetup');
+

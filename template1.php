@@ -28,7 +28,6 @@
 
 			<div class="col-xs-6">
 				<?php the_post_thumbnail('full', ['class' => 'img-responsive', 'title' => 'Feature image']); ?>
-				<!-- <?php the_post_thumbnail('single-post-thumbnail'); ?> -->
 			</div>
 		</div>
 <?php get_footer(); ?>

@@ -13,6 +13,10 @@ a{
 	color: #E65800;
 }
 
+p{
+	text-align: center;
+}
+
 .logo{
 	text-align: center;
 }
@@ -36,4 +40,10 @@ ul#menu-primary{
 
 .img-responsive{
 	max-width: 100%;
+	text-align: center;
 }
+
+/*.img-responsive img{
+	min-width: 100%;
+}
+*/
