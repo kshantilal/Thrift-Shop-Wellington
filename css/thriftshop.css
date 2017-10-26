@@ -25,3 +25,15 @@ ul#menu-primary{
 	float: left;
 	padding-left: 0px;
 }
+
+.bottom-spacer{
+	margin-bottom: 20px;
+}
+/*img.size-single-post-thumbnail{
+	width: 100%;
+	height: 100%;
+}*/
+
+.img-responsive{
+	max-width: 100%;
+}

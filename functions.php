@@ -17,6 +17,9 @@
 	}
 	add_action('init', 'customThemeSetup');
 
+	//Featured Images
+	add_theme_support( 'post-thumbnails' );
+	add_image_size( 'single-post-thumbnail', 500, 1000, true );
 
 	//Custom Logo
 	add_theme_support('custom-logo');
