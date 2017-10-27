@@ -18,8 +18,9 @@
 	add_action('init', 'customThemeSetup');
 
 	//Featured Images
+	// $width = 100%;
 	add_theme_support( 'post-thumbnails' );
-	add_image_size('single-post-thumbnail', 720, 480, array('center', 'center'));
+	add_image_size('products', 255, 385, array('center', 'center'));
 	
 
 	// function add_image_size($name, $width = 250, $height = 250, $crop = true){
