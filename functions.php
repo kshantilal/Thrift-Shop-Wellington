@@ -64,38 +64,16 @@
 
 
 
-
-	//Header text
-	function newTheme_header_text($wp_customize){
-		$wp_customize->add_setting('newTheme_header_text', array(
-			'default' => 'This is your Header title',
-			'transport' => 'refresh'
-		));
-
-		//Section
-		$wp_customize->add_section('newTheme_header_text_section', array(
-			'title' => 'Header Title'
-		));
-
-		//Control
-		$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'newTheme_header_text_control', array(
-			'label' => 'Header Text',
-			'section' => 'newTheme_header_text_section',
-			'settings' => 'newTheme_header_text'
-		)));
-	}
-	add_action('customize_register', 'newTheme_header_text');
-
 		//Title text
 	function newTheme_title_text($wp_customize){
 		$wp_customize->add_setting('newTheme_title_text', array(
-			'default' => 'This is your header Text',
+			'default' => 'This is your Post Text',
 			'transport' => 'refresh'
 		));
 
 		//Section
 		$wp_customize->add_section('newTheme_title_text_section', array(
-			'title' => 'Title for page'
+			'title' => 'Post Header'
 		));
 
 		//Control

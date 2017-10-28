@@ -12,7 +12,7 @@
 			<div class="col-xs-12 logo bottom-spacer">
 					<?php if(have_posts()): ?>
 						<div class="pageTitle">
-							<h1><?php echo get_theme_mod('newTheme_header_text'); ?></h1>
+							<h1><?php the_title(); ?></h1>
 						</div>
 					<?php endif; ?>
 			</div>
