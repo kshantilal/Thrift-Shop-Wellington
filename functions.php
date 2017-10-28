@@ -18,32 +18,9 @@
 	add_action('init', 'customThemeSetup');
 
 	//Featured Images
-	// $width = 100%;
 	add_theme_support( 'post-thumbnails' );
 	add_image_size('products', 255, 385, array('center', 'center'));
-	
-
-	// function add_image_size($name, $width = 250, $height = 250, $crop = true){
-	// 	global $_wp_additional_image_sizes;
-
-	// 	$_wp_additional_image_sizes[ $name ] = array(
-	// 		'width' => absint($width),
-	// 		'height' => absint($height),
-	// 		'crop' => $crop
-
-	// 	); 
-	// }
-	// function add_image_size( $name, $width = 0, $height = 0, $crop = false ) {
- //    global $_wp_additional_image_sizes;
- 
-	//     $_wp_additional_image_sizes[ $name ] = array(
-	//         'width'  => absint( $width ),
-	//         'height' => absint( $height ),
-	//         'crop'   => $crop,
-	//     );
-	// }
-
-
+	add_image_size('home', 850, 570, array('center', 'center'));
 
 
 	//Custom Logo
@@ -63,3 +40,70 @@
 	}
 	add_action('after_setup_theme', 'customLogoSetup');
 
+	//Footer Text
+	function newTheme_footer_text($wp_customize){
+		//Settings
+		$wp_customize->add_setting('newTheme_footer_text', array(
+			'default' => 'This is your footer Text',
+			'transport' => 'refresh'
+		));
+
+		//Section
+		$wp_customize->add_section('newTheme_footer_text_section', array(
+			'title' => 'Footer'
+		));
+
+		//Control
+		$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'newTheme_footer_text_control', array(
+			'label' => 'Footer Text',
+			'section' => 'newTheme_footer_text_section',
+			'settings' => 'newTheme_footer_text'
+		)));
+	}
+	add_action('customize_register', 'newTheme_footer_text');
+
+
+
+
+	//Header text
+	function newTheme_header_text($wp_customize){
+		$wp_customize->add_setting('newTheme_header_text', array(
+			'default' => 'This is your Header title',
+			'transport' => 'refresh'
+		));
+
+		//Section
+		$wp_customize->add_section('newTheme_header_text_section', array(
+			'title' => 'Header Title'
+		));
+
+		//Control
+		$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'newTheme_header_text_control', array(
+			'label' => 'Header Text',
+			'section' => 'newTheme_header_text_section',
+			'settings' => 'newTheme_header_text'
+		)));
+	}
+	add_action('customize_register', 'newTheme_header_text');
+
+		//Title text
+	function newTheme_title_text($wp_customize){
+		$wp_customize->add_setting('newTheme_title_text', array(
+			'default' => 'This is your header Text',
+			'transport' => 'refresh'
+		));
+
+		//Section
+		$wp_customize->add_section('newTheme_title_text_section', array(
+			'title' => 'Title for page'
+		));
+
+		//Control
+		$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'newTheme_title_text_control', array(
+			'label' => 'Title Text',
+			'section' => 'newTheme_title_text_section',
+			'settings' => 'newTheme_title_text'
+		)));
+	}
+	add_action('customize_register', 'newTheme_title_text');
+	

@@ -6,7 +6,16 @@
 
 
  ?>
+
 <?php get_header(); ?>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="pageTitle">
+				<h1><?php echo get_theme_mod('newTheme_header_text'); ?></h1>
+			</div>
+			
+		</div>
+	</div>
 	<div class="row">
 		<?php 
 			$parms = array(
