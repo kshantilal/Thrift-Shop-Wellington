@@ -64,8 +64,16 @@ ul#menu-primary{
 	text-align: left;
 }
 
+carousel-inner > .item > img{
+	margin: 0 auto;
+	width: auto;
+	height: 500px;
+}
+img.first-slide {
+    width: 50%;
+    margin: 0 auto;
 
-
+}
 
 
 
